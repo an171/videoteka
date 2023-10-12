@@ -7,9 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Видеотека</title>
     <style>
-        .custom-counter {
-            /* margin-left: 0;
-            padding-right: 0; */
+        /* .custom-counter {
             list-style-type: none;
         }
 
@@ -26,7 +24,7 @@
             font-weight: bold;
             padding: 3px 8px;
             border-radius: 3px;
-        }
+        } */
 
 
 
@@ -71,9 +69,13 @@
             for (let i = 0; i < jsonObj.length; i++) {
                 card = document.createElement('div');
                 H1 = document.createElement('h1');
-                H1.textContent = jsonObj[i]['title'] + " " + jsonObj[i]['time'];
+                H1.textContent = jsonObj[i]['title'];
                 header.appendChild(card);
                 card.appendChild(H1);
+
+                p0 = document.createElement('p');
+                p0.textContent = 'длительность: ' + jsonObj[i]['time']
+                card.appendChild(p0);
 
                 p1 = document.createElement('p');
                 p1.textContent = 'жанр: ' + jsonObj[i]['genre']
