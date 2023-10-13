@@ -52,9 +52,14 @@
             var header = document.querySelector('header');
             for (let i = 0; i < jsonObj.length; i++) {
                 card = document.createElement('div');
+                header.appendChild(card);
+
+                img = document.createElement('img');
+                img.src = "filmsimg/" + jsonObj[i]['cover']
+                card.appendChild(img);
+
                 H1 = document.createElement('h1');
                 H1.textContent = jsonObj[i]['title'];
-                header.appendChild(card);
                 card.appendChild(H1);
 
                 p0 = document.createElement('p');
@@ -85,9 +90,6 @@
                 p6.textContent = 'актеры: ' + jsonObj[i]['actors']
                 card.appendChild(p6);
 
-                img = document.createElement('img');
-                img.src = jsonObj[i]['cover']
-                card.appendChild(img);
 
 
             }
