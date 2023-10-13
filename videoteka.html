@@ -14,7 +14,7 @@
         }
 
         div {
-            width: 100%;
+            width: 45%;
             border: 1px solid black;
             padding: 20px;
             margin-top: 10px;
@@ -24,6 +24,13 @@
         div p {
             margin: 0;
 
+        }
+
+        img {
+            float: left;
+            width: 30%;
+            height: 100%;
+            object-fit: contain;
         }
     </style>
 </head>
@@ -77,6 +84,11 @@
                 p6 = document.createElement('p');
                 p6.textContent = 'актеры: ' + jsonObj[i]['actors']
                 card.appendChild(p6);
+
+                img = document.createElement('img');
+                img.src = jsonObj[i]['cover']
+                card.appendChild(img);
+
 
             }
         }
